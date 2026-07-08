@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Taskin Kadivar</title>
+  <meta name="description"
+    content="View featured projects and code repositories built by Taskin Kadivar. Django, Python, PHP, REST APIs.">
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%232563EB'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-size='16' font-weight='bold' fill='white'>TK</text></svg>">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    /* Unique layout features */
+    .project-list-num {
+      font-family: var(--font-mono);
+      font-size: var(--fs-xs);
+      color: var(--primary);
+      margin-bottom: var(--space-2);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-content">
+      <div class="preloader-brand">TK</div>
+      <div class="preloader-bar" style="margin-bottom: var(--space-4)">
+        <div class="preloader-bar-fill"></div>
+      </div>
+      <div class="preloader-subtext" id="preloaderSubtext"
+        style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--muted)">Initializing...</div>
+    </div>
+  </div>
+
+  <!-- Cursor Glow -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+
+  <!-- ═══════════════════════════════════════
+       PROJECTS SECTION
+       ═══════════════════════════════════════ -->
+  <section class="section" id="projects" style="padding-top: 140px">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label"><i data-lucide="git-branch"></i> Projects</span>
+        <h1 class="section-title">My <span class="text-gradient">Work</span></h1>
+        <p class="section-subtitle">Real-world applications built with modern tech stacks.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: Taskook Digital Library -->
+        <div class="project-card reveal" id="project-taskook-lib">
+          <div class="project-header">
+            <div class="project-icon">📚</div>
+            <span class="badge badge-success"><span class="badge-dot"></span> Production</span>
+          </div>
+          <div class="project-list-num">01</div>
+          <h3 class="project-name"><a href="case-study.html">Taskook Digital Library</a></h3>
+          <p class="project-desc">Full e-commerce platform for digital books with authentication, wishlist, cart,
+            checkout, book reading, orders, blogs, and a complete admin dashboard with product management and reports.
+          </p>
+          <div class="project-meta">
+            <span class="project-meta-item">
+              <span class="tag-dot" style="background:#306998"></span> Python
+            </span>
+            <span class="project-meta-item">
+              <span class="tag-dot" style="background:#0C4B33"></span> Django
+            </span>
+            <span class="project-meta-item">
+              <span class="tag-dot" style="background:#003B57"></span> SQLite
+            </span>
+            <span class="project-meta-item">
+              <span class="tag-dot" style="background:#F7DF1E"></span> JavaScript
+            </span>
+          </div>
+          <div class="project-actions" style="margin-top: auto">
+            <a href="https://github.com/taskinkadivar123/taskook" class="btn btn-secondary btn-sm" target="_blank"
+              rel="noopener"><i data-lucide="github"></i> GitHub</a>
+            <a href="case-study.html" class="btn btn-ghost btn-sm"><i data-lucide="file-text"></i> View Details</a>
+          </div>
+        </div>
+
+        <!-- Project 2: Taskook Salon -->
+        <div class="project-card reveal" id="project-taskook-salon">
+          <div class="project-header">
+            <div class="project-icon">💈</div>
+            <span class="badge badge-success"><span class="badge-dot"></span> Live</span>
+          </div>
+          <div class="project-list-num">02</div>
+          <h3 class="project-name"><a href="https://saloon-rut1.onrender.com" target="_blank" rel="noopener">Taskook
+              Salon</a></h3>
+          <p class="project-desc">Salon booking platform built with Python, Django, REST API, HTML/CSS/JS, and AJAX.
+            Integrates time availability checking and SMTP email booking notifications.</p>
+          <div class="project-meta">
+            <span class="project-meta-item">
+              <span class="tag-dot" style="background:#0C4B33"></span> Django
+            </span>
+            <span class="project-meta-item">
+              <span class="tag-dot" style="background:#06B6D4"></span> REST API
+            </span>
+            <span class="project-meta-item">
+              <span class="tag-dot" style="background:#F7DF1E"></span> AJAX
+            </span>
+            <span class="project-meta-item">
+              <span class="tag-dot" style="background:#F59E0B"></span> Email
+            </span>
+          </div>
+          <div class="project-actions" style="margin-top: auto">
+            <a href="https://saloon-rut1.onrender.com" class="btn btn-primary btn-sm" target="_blank" rel="noopener"><i
+                data-lucide="external-link"></i> Live Demo</a>
+            <a href="case-study-salon.html" class="btn btn-ghost btn-sm"><i data-lucide="file-text"></i> View
+              Details</a>
+          </div>
+        </div>
+
+        <!-- Project 3: Real Estate Prediction -->
+        <div class="project-card reveal" id="project-realestate-ml">
+          <div class="project-header">
+            <div class="project-icon">🏠</div>
+            <span class="badge badge-accent"><span class="badge-dot"></span> Research</span>
+          </div>
+          <div class="project-list-num">03</div>
+          <h3 class="project-name"><a href="https://github.com/taskinkadivar123/realEstate" target="_blank"
+              rel="noopener">Real Estate Prediction</a></h3>
+          <p class="project-desc">Machine learning pricing estimator model trained on historical data. Predicts real
+            estate listings values using multiple linear regression algorithms.</p>
+          <div class="project-meta">
+            <span class="project-meta-item">
+              <span class="tag-dot" style="background:#306998"></span> ML
+            </span>
+            <span class="project-meta-item">
+              <span class="tag-dot" style="background:#003B57"></span> Model Training
+            </span>
+            <span class="project-meta-item">
+              <span class="tag-dot" style="background:#150458"></span> Pandas
+            </span>
+            <span class="project-meta-item">
+              <span class="tag-dot" style="background:#F7931E"></span> Scikit-Learn
+            </span>
+          </div>
+          <div class="project-actions" style="margin-top: auto">
+            <a href="https://github.com/taskinkadivar123/realEstate" class="btn btn-secondary btn-sm" target="_blank"
+              rel="noopener"><i data-lucide="github"></i> GitHub</a>
+            <a href="case-study-realestate.html" class="btn btn-ghost btn-sm"><i data-lucide="file-text"></i> View
+              Details</a>
+          </div>
+        </div>
+
+        <!-- Project 4: Taskook Hospital -->
+        <div class="project-card reveal" id="project-taskook-hospital">
+          <div class="project-header">
+            <div class="project-icon">🏥</div>
+            <span class="badge badge-success"><span class="badge-dot"></span> Live</span>
+          </div>
+          <div class="project-list-num">04</div>
+          <h3 class="project-name"><a href="https://taskookwankaner.rf.gd" target="_blank" rel="noopener">Taskook
+              Hospital</a></h3>
+          <p class="project-desc">WordPress hospital portal hosting registration interfaces, patient dashboards,
+            appointment scheduling history, credential profiles, and info logs (Optimized for MS Edge).</p>
+          <div class="project-meta">
+            <span class="project-meta-item">
+              <span class="tag-dot" style="background:#21759B"></span> WordPress
+            </span>
+            <span class="project-meta-item">
+              <span class="tag-dot" style="background:#8892BF"></span> Dashboard
+            </span>
+            <span class="project-meta-item">
+              <span class="tag-dot" style="background:#00758F"></span> Memberships
+            </span>
+            <span class="project-meta-item">
+              <span class="tag-dot" style="background:#F59E0B"></span> SMTP
+            </span>
+          </div>
+          <div class="project-actions" style="margin-top: auto">
+            <a href="https://taskookwankaner.rf.gd" class="btn btn-primary btn-sm" target="_blank" rel="noopener"><i
+                data-lucide="external-link"></i> Live Portal</a>
+            <a href="case-study-hospital.html" class="btn btn-ghost btn-sm"><i data-lucide="file-text"></i> View
+              Details</a>
+          </div>
+        </div>
+
+        <!-- Project 5: The Kiochhi Saloon -->
+        <div class="project-card reveal" id="project-kiochhi-salon">
+          <div class="project-header">
+            <div class="project-icon">✂️</div>
+            <span class="badge badge-success"><span class="badge-dot"></span> Live</span>
+          </div>
+          <div class="project-list-num">05</div>
+          <h3 class="project-name"><a href="https://taskinkadivar123.github.io/the-kiochhi/" target="_blank"
+              rel="noopener">The Kiochhi Saloon</a></h3>
+          <p class="project-desc">Lightweight and highly polished responsive frontend website showcasing services menus,
+            styled images galleries, contacts maps, and company bio cards.</p>
+          <div class="project-meta">
+            <span class="project-meta-item">
+              <span class="tag-dot" style="background:#E34F26"></span> HTML5
+            </span>
+            <span class="project-meta-item">
+              <span class="tag-dot" style="background:#1572B6"></span> CSS3
+            </span>
+            <span class="project-meta-item">
+              <span class="tag-dot" style="background:#F7DF1E"></span> Vanilla JS
+            </span>
+            <span class="project-meta-item">
+              <span class="tag-dot" style="background:#A1A1AA"></span> Gallery
+            </span>
+          </div>
+          <div class="project-actions" style="margin-top: auto">
+            <a href="https://taskinkadivar123.github.io/the-kiochhi/" class="btn btn-primary btn-sm" target="_blank"
+              rel="noopener"><i data-lucide="external-link"></i> Live Site</a>
+            <a href="case-study-kiochhi.html" class="btn btn-ghost btn-sm"><i data-lucide="file-text"></i> View
+              Details</a>
+          </div>
+        </div>
+
+        <!-- Coming soon placeholder -->
+        <div class="project-card reveal"
+          style="border-style: dashed; justify-content: center; align-items: center; text-align: center">
+          <div style="font-size: 2rem; margin-bottom: var(--space-2)">🚀</div>
+          <h3 style="font-size: var(--fs-base); font-weight: var(--fw-semibold)">More Coming Soon</h3>
+          <p style="font-size: var(--fs-xs); color: var(--muted)">New projects are currently in development.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       CTA SECTION
+       ═══════════════════════════════════════ -->
+  <section class="section" style="background: rgba(var(--primary-rgb), 0.03); border-top: 1px solid var(--border)">
+    <div class="container text-center" style="max-width: 600px; margin: 0 auto; text-align: center">
+      <div class="reveal">
+        <h2 style="font-size: var(--fs-2xl); margin-bottom: var(--space-2)">Like what you see?</h2>
+        <h3 class="text-gradient" style="font-size: var(--fs-3xl); margin-bottom: var(--space-4)">Let's Build Yours.
+        </h3>
+        <p style="color: var(--muted); margin: 0 auto var(--space-8)">I'm ready to bring your project ideas to life.</p>
+        <div style="display: flex; gap: var(--space-4); justify-content: center">
+          <a href="contact.html" class="btn btn-primary btn-lg">Start a Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-terminal">
+        <div class="footer-top">
+          <div class="footer-logo">
+            <div class="footer-logo-icon"><i data-lucide="terminal"></i></div>
+            Taskin Kadivar
+          </div>
+          <span style="color:var(--muted);font-size:var(--fs-xs)">Full Stack Django Developer — Building modern web
+            applications with Python, Django, Custom PHP, and REST APIs.</span>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-tech">
+            <span>Made with</span>
+            <span class="footer-tech-item"><span class="footer-heart">♥</span></span>
+            <span class="footer-tech-item">Python</span>
+            <span class="footer-tech-item">•</span>
+            <span class="footer-tech-item">HTML</span>
+            <span class="footer-tech-item">•</span>
+            <span class="footer-tech-item">CSS</span>
+            <span class="footer-tech-item">•</span>
+            <span class="footer-tech-item">JavaScript</span>
+            <span class="footer-tech-item">•</span>
+            <span class="footer-tech-item">Django</span>
+          </div>
+          <div class="footer-copyright">
+            © 2026 Taskin Kadivar. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════
+       FLOATING DOCK
+       ═══════════════════════════════════════ -->
+  <nav class="dock-container dock-enter" id="dock" aria-label="Navigation dock">
+    <div class="dock">
+      <a href="index.html" class="dock-item" data-tooltip="Home" id="dock-home">
+        <i data-lucide="home"></i>
+      </a>
+      <a href="about.html" class="dock-item" data-tooltip="About" id="dock-about">
+        <i data-lucide="user"></i>
+      </a>
+      <a href="projects.html" class="dock-item" data-tooltip="Projects" id="dock-projects">
+        <i data-lucide="folder-open"></i>
+      </a>
+      <a href="skills.html" class="dock-item" data-tooltip="Skills" id="dock-skills">
+        <i data-lucide="cpu"></i>
+      </a>
+      <a href="services.html" class="dock-item" data-tooltip="Services" id="dock-services">
+        <i data-lucide="briefcase"></i>
+      </a>
+      <div class="dock-separator"></div>
+      <a href="https://github.com/taskinkadivar123" class="dock-item" data-tooltip="GitHub" target="_blank"
+        rel="noopener" id="dock-github">
+        <i data-lucide="github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/taskin-kadivar-58916b325/" class="dock-item" data-tooltip="LinkedIn"
+        target="_blank" rel="noopener" id="dock-linkedin">
+        <i data-lucide="linkedin"></i>
+      </a>
+      <a href="https://www.fiverr.com/taskookservices/" class="dock-item" data-tooltip="Fiverr" target="_blank"
+        rel="noopener" id="dock-fiverr">
+        <i data-lucide="shopping-bag"></i>
+      </a>
+      <div class="dock-separator"></div>
+      <a href="contact.html" class="dock-item" data-tooltip="Contact" id="dock-contact">
+        <i data-lucide="mail"></i>
+      </a>
+    </div>
+  </nav>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.js"></script>
+
+  <!-- App Modules -->
+  <script src="js/theme.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/dock.js"></script>
+  <script src="js/skills.js"></script>
+  <script src="js/github.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

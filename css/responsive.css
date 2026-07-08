@@ -1,0 +1,352 @@
+/* ============================================
+   TaskOS — Responsive Styles
+   ============================================ */
+
+/* ── Max 1280px ──────────────────────────── */
+@media (max-width: 1280px) {
+  :root {
+    --fs-6xl: 3.5rem;
+    --fs-5xl: 3rem;
+    --fs-4xl: 2.5rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .github-section-inner {
+    grid-template-columns: 1fr 300px;
+  }
+}
+
+/* ── Max 1024px ──────────────────────────── */
+@media (max-width: 1024px) {
+  :root {
+    --fs-6xl: 3rem;
+    --fs-5xl: 2.5rem;
+    --fs-4xl: 2rem;
+    --fs-3xl: 1.75rem;
+    --section-pad: var(--space-16) 0;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-roles {
+    align-items: center;
+  }
+
+  .hero-tagline {
+    margin: 0 auto var(--space-8);
+  }
+
+  .hero-cta {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .hero-editor {
+    animation: none;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+
+  .about-avatar-container {
+    position: static;
+    display: flex;
+    justify-content: center;
+  }
+
+  .github-section-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ── Max 768px ───────────────────────────── */
+@media (max-width: 768px) {
+  :root {
+    --fs-6xl: 2.5rem;
+    --fs-5xl: 2rem;
+    --fs-4xl: 1.75rem;
+    --fs-3xl: 1.5rem;
+    --container-pad: var(--space-4);
+    --section-pad: var(--space-12) 0;
+  }
+
+  .hero {
+    padding-top: var(--space-16);
+    min-height: auto;
+  }
+
+  .hero-name {
+    font-size: var(--fs-5xl);
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .horizontal-timeline {
+    flex-direction: column;
+    gap: var(--space-6);
+  }
+
+  .horizontal-timeline::before {
+    display: none;
+  }
+
+  .horizontal-timeline-item {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: start;
+    text-align: left;
+    gap: var(--space-2) var(--space-4);
+    padding: var(--space-5);
+  }
+
+  .horizontal-timeline-icon {
+    grid-row: span 3;
+    margin-bottom: 0;
+  }
+
+  .horizontal-timeline-year {
+    grid-column: 2;
+    margin-bottom: 0;
+  }
+
+  .horizontal-timeline-title {
+    grid-column: 2;
+    margin-bottom: 0;
+  }
+
+  .horizontal-timeline-desc {
+    grid-column: 2;
+    margin-bottom: 0;
+  }
+
+  .github-stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    gap: var(--space-4);
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--space-4);
+    text-align: center;
+  }
+
+  .footer-tech {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Dock adjustments */
+  .dock-container {
+    bottom: var(--space-3);
+  }
+
+  .dock {
+    padding: var(--space-2) var(--space-3);
+    gap: var(--space-1);
+  }
+
+  .dock-item {
+    width: 38px;
+    height: 38px;
+  }
+
+  .dock-item i {
+    width: 18px;
+    height: 18px;
+  }
+
+  .section-header {
+    margin-bottom: var(--space-10);
+  }
+
+  .notebook-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .process-step {
+    min-width: 140px;
+  }
+
+  .status-bar-inner {
+    gap: var(--space-4);
+    justify-content: center;
+  }
+
+  .avatar-initials {
+    width: 200px;
+    height: 200px;
+    font-size: 4rem;
+  }
+
+  .contribution-graph {
+    grid-template-columns: repeat(26, 1fr);
+  }
+}
+
+/* ── Max 480px ───────────────────────────── */
+@media (max-width: 480px) {
+  :root {
+    --fs-6xl: 2rem;
+    --fs-5xl: 1.75rem;
+    --fs-4xl: 1.5rem;
+    --fs-3xl: 1.25rem;
+    --fs-2xl: 1.125rem;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-roles {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .hero-content {
+    text-align: left;
+  }
+
+  .hero-cta {
+    align-items: stretch;
+  }
+
+  .hero-tagline {
+    margin-left: 0;
+  }
+
+  .project-actions {
+    flex-direction: column;
+  }
+
+  .project-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .status-bar-inner {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .about-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .github-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dock-container {
+    width: calc(100% - var(--space-6));
+  }
+
+  .dock {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .avatar-initials {
+    width: 160px;
+    height: 160px;
+    font-size: 3rem;
+  }
+
+  .contribution-graph {
+    grid-template-columns: repeat(18, 1fr);
+  }
+
+  .process-step {
+    min-width: 120px;
+  }
+
+  .notebook-toolbar {
+    display: none;
+  }
+
+  .code-editor-body {
+    font-size: var(--fs-xs);
+  }
+
+  .terminal-body {
+    font-size: var(--fs-xs);
+  }
+}

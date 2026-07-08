@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Taskin Kadivar</title>
+  <meta name="description"
+    content="Get in touch with Taskin Kadivar. Freelancing opportunities, Django/Python backend consulting, or general inquiries.">
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%232563EB'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-size='16' font-weight='bold' fill='white'>TK</text></svg>">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-content">
+      <div class="preloader-brand">TK</div>
+      <div class="preloader-bar" style="margin-bottom: var(--space-4)">
+        <div class="preloader-bar-fill"></div>
+      </div>
+      <div class="preloader-subtext" id="preloaderSubtext"
+        style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--muted)">Initializing...</div>
+    </div>
+  </div>
+
+  <!-- Cursor Glow -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+
+  <!-- ═══════════════════════════════════════
+       CONTACT SECTION
+       ═══════════════════════════════════════ -->
+  <section class="section" id="contact" style="padding-top: 140px">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label"><i data-lucide="mail"></i> Contact</span>
+        <h1 class="section-title">Let's <span class="text-gradient">Connect</span></h1>
+        <p class="section-subtitle">Have a project in mind? Let's build something great together.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Left: Info -->
+        <div class="contact-info reveal">
+          <h3>Get in Touch</h3>
+          <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+
+          <div class="contact-links">
+            <a href="mailto:taskinkadivar524@gmail.com" class="contact-link-item" id="contact-email">
+              <i data-lucide="mail"></i>
+              taskinkadivar524@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/taskin-kadivar-58916b325/" class="contact-link-item"
+              id="contact-linkedin" target="_blank" rel="noopener">
+              <i data-lucide="linkedin"></i>
+              LinkedIn Profile
+            </a>
+            <a href="https://www.fiverr.com/taskookservices/" class="contact-link-item" id="contact-fiverr"
+              target="_blank" rel="noopener">
+              <i data-lucide="shopping-bag"></i>
+              Fiverr Profile
+            </a>
+            <a href="https://github.com/taskinkadivar123" class="contact-link-item" id="contact-github" target="_blank"
+              rel="noopener">
+              <i data-lucide="github"></i>
+              GitHub Profile
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Terminal Form -->
+        <div class="contact-terminal reveal">
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot"></span>
+              </div>
+              <span class="terminal-title">~/contact — bash</span>
+            </div>
+            <div class="terminal-body">
+              <div class="terminal-line">
+                <span class="terminal-prompt">~/contact $</span>
+                <span class="terminal-command">send_message</span>
+              </div>
+            </div>
+            <form id="contactForm" class="contact-form-body">
+              <div class="terminal-input-group">
+                <label class="terminal-input-label" for="contact-name">name:</label>
+                <input type="text" class="terminal-input" id="contact-name" name="name" placeholder="Your Name" required
+                  autocomplete="name">
+              </div>
+              <div class="terminal-input-group">
+                <label class="terminal-input-label" for="contact-email-input">email:</label>
+                <input type="email" class="terminal-input" id="contact-email-input" name="email"
+                  placeholder="your@email.com" required autocomplete="email">
+              </div>
+              <div class="terminal-input-group">
+                <label class="terminal-input-label" for="contact-subject">subject:</label>
+                <input type="text" class="terminal-input" id="contact-subject" name="subject"
+                  placeholder="Project Discussion" required>
+              </div>
+              <div class="terminal-input-group" style="align-items:flex-start">
+                <label class="terminal-input-label" for="contact-message">message:</label>
+                <textarea class="terminal-textarea" id="contact-message" name="message"
+                  placeholder="Tell me about your project..." required rows="4"></textarea>
+              </div>
+              <div class="contact-submit-area">
+                <button type="submit" class="btn btn-primary btn-lg" id="btn-contact-submit" style="width:100%">
+                  <i data-lucide="send"></i> Send Message
+                </button>
+              </div>
+            </form>
+            <div class="form-success" id="formSuccess">
+              <i data-lucide="check-circle-2"></i>
+              <h4 style="margin-bottom:var(--space-2)">Message Sent!</h4>
+              <p style="color:var(--muted);font-size:var(--fs-sm)">I'll get back to you within 24 hours.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-terminal">
+        <div class="footer-top">
+          <div class="footer-logo">
+            <div class="footer-logo-icon"><i data-lucide="terminal"></i></div>
+            Taskin Kadivar
+          </div>
+          <span style="color:var(--muted);font-size:var(--fs-xs)">Full Stack Django Developer — Building modern web
+            applications with Python, Django, Custom PHP, and REST APIs.</span>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-tech">
+            <span>Made with</span>
+            <span class="footer-tech-item"><span class="footer-heart">♥</span></span>
+            <span class="footer-tech-item">Python</span>
+            <span class="footer-tech-item">•</span>
+            <span class="footer-tech-item">HTML</span>
+            <span class="footer-tech-item">•</span>
+            <span class="footer-tech-item">CSS</span>
+            <span class="footer-tech-item">•</span>
+            <span class="footer-tech-item">JavaScript</span>
+            <span class="footer-tech-item">•</span>
+            <span class="footer-tech-item">Django</span>
+          </div>
+          <div class="footer-copyright">
+            © 2026 Taskin Kadivar. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════
+       FLOATING DOCK
+       ═══════════════════════════════════════ -->
+  <nav class="dock-container dock-enter" id="dock" aria-label="Navigation dock">
+    <div class="dock">
+      <a href="index.html" class="dock-item" data-tooltip="Home" id="dock-home">
+        <i data-lucide="home"></i>
+      </a>
+      <a href="about.html" class="dock-item" data-tooltip="About" id="dock-about">
+        <i data-lucide="user"></i>
+      </a>
+      <a href="projects.html" class="dock-item" data-tooltip="Projects" id="dock-projects">
+        <i data-lucide="folder-open"></i>
+      </a>
+      <a href="skills.html" class="dock-item" data-tooltip="Skills" id="dock-skills">
+        <i data-lucide="cpu"></i>
+      </a>
+      <a href="services.html" class="dock-item" data-tooltip="Services" id="dock-services">
+        <i data-lucide="briefcase"></i>
+      </a>
+      <div class="dock-separator"></div>
+      <a href="https://github.com/taskinkadivar123" class="dock-item" data-tooltip="GitHub" target="_blank"
+        rel="noopener" id="dock-github">
+        <i data-lucide="github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/taskin-kadivar-58916b325/" class="dock-item" data-tooltip="LinkedIn"
+        target="_blank" rel="noopener" id="dock-linkedin">
+        <i data-lucide="linkedin"></i>
+      </a>
+      <a href="https://www.fiverr.com/taskookservices/" class="dock-item" data-tooltip="Fiverr" target="_blank"
+        rel="noopener" id="dock-fiverr">
+        <i data-lucide="shopping-bag"></i>
+      </a>
+      <div class="dock-separator"></div>
+      <a href="contact.html" class="dock-item" data-tooltip="Contact" id="dock-contact">
+        <i data-lucide="mail"></i>
+      </a>
+    </div>
+  </nav>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.js"></script>
+
+  <!-- App Modules -->
+  <script src="js/theme.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/dock.js"></script>
+  <script src="js/skills.js"></script>
+  <script src="js/github.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

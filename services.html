@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Taskin Kadivar</title>
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%232563EB'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-size='16' font-weight='bold' fill='white'>TK</text></svg>">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+      gap: var(--space-8);
+      margin-top: var(--space-12);
+    }
+
+    .service-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-8);
+      position: relative;
+      transition: all var(--duration-normal) var(--ease-out);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      box-sizing: border-box;
+    }
+
+    .service-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-glow-primary);
+    }
+
+    .service-icon-box {
+      width: 50px;
+      height: 50px;
+      border-radius: var(--radius-md);
+      background: rgba(var(--primary-rgb), 0.1);
+      border: 1px solid rgba(var(--primary-rgb), 0.2);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--space-6);
+      transition: all 0.3s;
+    }
+
+    .service-card:hover .service-icon-box {
+      background: var(--primary);
+      color: var(--text);
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .service-tag {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: var(--ls-wider);
+      color: var(--muted);
+      margin-bottom: var(--space-2);
+      display: block;
+    }
+
+    .service-title {
+      font-family: var(--font-heading);
+      font-size: var(--fs-lg);
+      font-weight: var(--fw-bold);
+      margin-bottom: var(--space-3);
+      color: var(--text);
+    }
+
+    .service-desc {
+      font-size: var(--fs-sm);
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: var(--space-6);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-content">
+      <div class="preloader-brand">TK</div>
+      <div class="preloader-bar" style="margin-bottom: var(--space-4)">
+        <div class="preloader-bar-fill"></div>
+      </div>
+      <div class="preloader-subtext" id="preloaderSubtext"
+        style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--muted)">Initializing...</div>
+    </div>
+  </div>
+
+  <!-- Cursor Glow -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ═══════════════════════════════════════
+       SERVICES SECTION
+       ═══════════════════════════════════════ -->
+  <section class="section" id="services" style="padding-top: 140px">
+    <div class="container">
+      <div class="section-header reveal text-center" style="text-align: center; margin: 0 auto var(--space-10)">
+        <span class="section-label" style="justify-content: center; margin: 0 auto var(--space-2)"><i
+            data-lucide="briefcase"></i> My Offerings</span>
+        <h1 class="section-title">Services I <span class="text-gradient">Provide</span></h1>
+        <p class="section-subtitle" style="text-align: center; margin-left: auto; margin-right: auto;">Scalable
+          backends, automated scripts, clean UI prototypes, and dynamic code solutions.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1: Django Website -->
+        <div class="service-card reveal">
+          <div class="service-icon-box">
+            <i data-lucide="globe" style="width:24px;height:24px;"></i>
+          </div>
+          <span class="service-tag">Backend</span>
+          <h3 class="service-title">Django Website Development</h3>
+          <p class="service-desc">Crafting robust, production-ready web platforms with Python and Django. Features
+            custom administrative panels, secured membership controls, and clean database integrations.</p>
+        </div>
+
+        <!-- Service 2: Python Automation -->
+        <div class="service-card reveal">
+          <div class="service-icon-box">
+            <i data-lucide="terminal" style="width:24px;height:24px;"></i>
+          </div>
+          <span class="service-tag">Automation</span>
+          <h3 class="service-title">Python Automation Scripts</h3>
+          <p class="service-desc">Automate your regular digital operations. Programmatic utilities including scheduled
+            web scraping models, bulk data parsers, and custom API sync tools.</p>
+        </div>
+
+        <!-- Service 3: Custom PHP -->
+        <div class="service-card reveal">
+          <div class="service-icon-box">
+            <i data-lucide="code" style="width:24px;height:24px;"></i>
+          </div>
+          <span class="service-tag">Backend</span>
+          <h3 class="service-title">Custom PHP Development</h3>
+          <p class="service-desc">Maintaining custom PHP environments and legacy web portals. Integration of secure REST
+            gateways, database procedures, and cleaner scripting modules.</p>
+        </div>
+
+        <!-- Service 4: Frontend HTML/CSS/JS -->
+        <div class="service-card reveal">
+          <div class="service-icon-box">
+            <i data-lucide="layout" style="width:24px;height:24px;"></i>
+          </div>
+          <span class="service-tag">Frontend</span>
+          <h3 class="service-title">Frontend HTML/CSS/JS Design</h3>
+          <p class="service-desc">Translating interface ideas into pixel-perfect, highly responsive frontend layouts.
+            Custom CSS grids, typography scaling, and fluid micro-animations.</p>
+        </div>
+
+        <!-- Service 5: Brand Design Figma -->
+        <div class="service-card reveal">
+          <div class="service-icon-box">
+            <i data-lucide="palette" style="width:24px;height:24px;"></i>
+          </div>
+          <span class="service-tag">UI/UX Design</span>
+          <h3 class="service-title">Figma Branding & UI templates</h3>
+          <p class="service-desc">Prototyping beautiful mobile and desktop interface wireframes in Figma. Creation of
+            cohesive banners, vector marketing assets, and modern vector logos.</p>
+        </div>
+
+        <!-- Service 6: AI Productivity Assets -->
+        <div class="service-card reveal">
+          <div class="service-icon-box">
+            <i data-lucide="sparkles" style="width:24px;height:24px;"></i>
+          </div>
+          <span class="service-tag">AI Design</span>
+          <h3 class="service-title">AI Image & Video Generation</h3>
+          <p class="service-desc">Integrating cutting-edge AI generation pipelines to produce premium illustration
+            graphics, cinematic video elements, stable diffusion animations, and asset overlays at high speed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-terminal">
+        <div class="footer-top">
+          <div class="footer-logo">
+            <div class="footer-logo-icon"><i data-lucide="terminal"></i></div>
+            Taskin Kadivar
+          </div>
+          <span style="color:var(--muted);font-size:var(--fs-xs)">Full Stack Django Developer — Building modern web
+            applications with Python, Django, Custom PHP, and REST APIs.</span>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-tech">
+            <span>Made with</span>
+            <span class="footer-tech-item"><span class="footer-heart">♥</span></span>
+            <span class="footer-tech-item">Python</span>
+            <span class="footer-tech-item">•</span>
+            <span class="footer-tech-item">HTML</span>
+            <span class="footer-tech-item">•</span>
+            <span class="footer-tech-item">CSS</span>
+            <span class="footer-tech-item">•</span>
+            <span class="footer-tech-item">JavaScript</span>
+            <span class="footer-tech-item">•</span>
+            <span class="footer-tech-item">Django</span>
+          </div>
+          <div class="footer-copyright">
+            © 2026 Taskin Kadivar. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════
+       FLOATING DOCK
+       ═══════════════════════════════════════ -->
+  <nav class="dock-container dock-enter" id="dock" aria-label="Navigation dock">
+    <div class="dock">
+      <a href="index.html" class="dock-item" data-tooltip="Home" id="dock-home">
+        <i data-lucide="home"></i>
+      </a>
+      <a href="about.html" class="dock-item" data-tooltip="About" id="dock-about">
+        <i data-lucide="user"></i>
+      </a>
+      <a href="projects.html" class="dock-item" data-tooltip="Projects" id="dock-projects">
+        <i data-lucide="folder-open"></i>
+      </a>
+      <a href="skills.html" class="dock-item" data-tooltip="Skills" id="dock-skills">
+        <i data-lucide="cpu"></i>
+      </a>
+      <a href="services.html" class="dock-item active" data-tooltip="Services" id="dock-services">
+        <i data-lucide="briefcase"></i>
+      </a>
+      <div class="dock-separator"></div>
+      <a href="https://github.com/taskinkadivar123" class="dock-item" data-tooltip="GitHub" target="_blank"
+        rel="noopener" id="dock-github">
+        <i data-lucide="github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/taskin-kadivar-58916b325/" class="dock-item" data-tooltip="LinkedIn"
+        target="_blank" rel="noopener" id="dock-linkedin">
+        <i data-lucide="linkedin"></i>
+      </a>
+      <a href="https://www.fiverr.com/taskookservices/" class="dock-item" data-tooltip="Fiverr" target="_blank"
+        rel="noopener" id="dock-fiverr">
+        <i data-lucide="shopping-bag"></i>
+      </a>
+      <div class="dock-separator"></div>
+      <a href="contact.html" class="dock-item" data-tooltip="Contact" id="dock-contact">
+        <i data-lucide="mail"></i>
+      </a>
+    </div>
+  </nav>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.js"></script>
+
+  <!-- App Modules -->
+  <script src="js/theme.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/dock.js"></script>
+  <script src="js/skills.js"></script>
+  <script src="js/github.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Study: Taskook Hospital | Taskin Kadivar</title>
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%232563EB'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-size='16' font-weight='bold' fill='white'>TK</text></svg>">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-content">
+      <div class="preloader-brand">TK</div>
+      <div class="preloader-bar" style="margin-bottom: var(--space-4)">
+        <div class="preloader-bar-fill"></div>
+      </div>
+      <div class="preloader-subtext" id="preloaderSubtext"
+        style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--muted)">Initializing...</div>
+    </div>
+  </div>
+
+  <!-- Cursor Glow -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+
+  <!-- Case Study Hero -->
+  <div class="case-study-hero"
+    style="background-image:linear-gradient(to bottom, rgba(var(--bg-rgb), 0.7), var(--bg)), radial-gradient(circle, rgba(var(--primary-rgb),0.15) 0%, transparent 60%); padding-top: 140px">
+    <div class="container" style="position:relative;z-index:2">
+      <div class="case-study-content">
+        <a href="projects.html" class="btn btn-secondary btn-sm" style="margin-bottom:var(--space-6)">
+          <i data-lucide="arrow-left"></i> Back to Projects
+        </a>
+        <br>
+        <span class="badge badge-success" style="margin-bottom:var(--space-4)"><span class="badge-dot"></span>
+          Live</span>
+        <h1 class="section-title" style="font-size:var(--fs-5xl)">Taskook Hospital</h1>
+        <p class="section-subtitle" style="font-size:var(--fs-xl)">PHP · MySQL | Dashboard • Hospital
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Case Study Content -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="case-study-content">
+        <br>
+        <!-- Screenshots Horizontal Slider (Add 4 images in one image horizontal scroll button) -->
+        <!-- <div class="case-study-section reveal">
+          <h3><i data-lucide="image"></i> Interface Preview</h3>
+          <div class="slider-container">
+            <button class="slider-btn slider-btn-prev" aria-label="Previous image"><i
+                data-lucide="chevron-left"></i></button>
+            <button class="slider-btn slider-btn-next" aria-label="Next image"><i
+                data-lucide="chevron-right"></i></button>
+            <div class="slider-track">
+              <div class="slider-slide" style="background-image: url('images/hos1.PNG')">
+                <div class="slider-caption">🏥 Slide 1: Clinic Homepage</div>
+              </div>
+              <div class="slider-slide" style="background-image: url('images/hos2.PNG')">
+                <div class="slider-caption">👤 Slide 2: Patient Registration</div>
+              </div>
+              <div class="slider-slide" style="background-image: url('images/hos3.PNG')">
+                <div class="slider-caption">📋 Slide 3: Appointment History</div>
+              </div>
+              <div class="slider-slide" style="background-image: url('images/hos4.PNG')">
+                <div class="slider-caption">⚙️ Slide 4: WP Admin Configurations</div>
+              </div>
+            </div>
+            <div class="slider-dots"></div>
+          </div>
+        </div> -->
+
+        <!-- Overview -->
+        <div class="case-study-section reveal">
+          <h3><i data-lucide="info"></i> Overview</h3>
+          <p>A comprehensive clinic management platform built inside WordPress. Please note: this web portal is
+            optimized for Microsoft Edge browser configurations.</p>
+        </div>
+
+        <!-- Problem -->
+        <div class="case-study-section reveal">
+          <h3><i data-lucide="alert-triangle"></i> The Problem</h3>
+          <p>Hospital clinics need a portal for patients to sign up, change credentials, review hospital information,
+            and manage booking history.</p>
+        </div>
+
+        <!-- Solution -->
+        <div class="case-study-section reveal">
+          <h3><i data-lucide="check-circle-2"></i> The Solution</h3>
+          <p>Built a clinic dashboard inside WordPress with membership plugin configurations, SMTP email delivery, and
+            user profiles.</p>
+        </div>
+
+        <!-- Architecture -->
+        <div class="case-study-section reveal">
+          <h3><i data-lucide="layout"></i> Architecture</h3>
+          <p>WordPress Content Management System running PHP with appointment plugins and SMTP configurations.</p>
+        </div>
+
+        <!-- Database -->
+        <div class="case-study-section reveal">
+          <h3><i data-lucide="database"></i> Database Design</h3>
+          <p>MySQL database hosting user records, appointments history logs, metadata, and pages.</p>
+        </div>
+
+        <!-- Challenges -->
+        <div class="case-study-section reveal">
+          <h3><i data-lucide="shield-alert"></i> Technical Challenges</h3>
+          <p>
+            ▹ Configuring custom secure membership dashboards inside WordPress<br>▹ Restricting appointment actions to
+            verified logged-in users<br>▹ Edge browser specific plugin dependencies
+          </p>
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="case-study-section reveal">
+          <h3><i data-lucide="cpu"></i> Tech Stack</h3>
+          <div style="display:flex;gap:var(--space-2);flex-wrap:wrap;margin-top:var(--space-2)">
+            <span class="tag">PHP</span>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS/JS</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Appointment Dashboard</span>
+          </div>
+        </div>
+
+        <!-- Features -->
+        <div class="case-study-section reveal">
+          <h3><i data-lucide="star"></i> Features</h3>
+          <p>
+            ▹ User Login & Registration<br>▹ User Profile Dashboard<br>▹ Password Change Actions<br>▹ User Appointment
+            History List<br>▹ Hospital Information & Services<br>▹ Email Notifications Integration
+          </p>
+        </div>
+
+        <!-- Actions -->
+        <div style="display:flex;gap:var(--space-4);margin-top:var(--space-10)">
+          <a href="https://taskookwankaner.rf.gd" class="btn btn-primary" target="_blank" rel="noopener"><i
+              data-lucide="external-link"></i> Live Demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-terminal">
+        <div class="footer-top">
+          <div class="footer-logo">
+            <div class="footer-logo-icon"><i data-lucide="terminal"></i></div>
+            Taskin Kadivar
+          </div>
+          <span style="color:var(--muted);font-size:var(--fs-xs)">Full Stack Django Developer — Building modern web
+            applications with Python, Django, Custom PHP, and REST APIs.</span>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-tech">
+            <span>Made with</span>
+            <span class="footer-tech-item"><span class="footer-heart">♥</span></span>
+            <span class="footer-tech-item">Python</span>
+            <span class="footer-tech-item">•</span>
+            <span class="footer-tech-item">HTML</span>
+            <span class="footer-tech-item">•</span>
+            <span class="footer-tech-item">CSS</span>
+            <span class="footer-tech-item">•</span>
+            <span class="footer-tech-item">JavaScript</span>
+            <span class="footer-tech-item">•</span>
+            <span class="footer-tech-item">Django</span>
+          </div>
+          <div class="footer-copyright">
+            © 2026 Taskin Kadivar. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════
+       FLOATING DOCK
+       ═══════════════════════════════════════ -->
+  <nav class="dock-container dock-enter" id="dock" aria-label="Navigation dock">
+    <div class="dock">
+      <a href="index.html" class="dock-item" data-tooltip="Home" id="dock-home">
+        <i data-lucide="home"></i>
+      </a>
+      <a href="about.html" class="dock-item" data-tooltip="About" id="dock-about">
+        <i data-lucide="user"></i>
+      </a>
+      <a href="projects.html" class="dock-item" data-tooltip="Projects" id="dock-projects">
+        <i data-lucide="folder-open"></i>
+      </a>
+      <a href="skills.html" class="dock-item" data-tooltip="Skills" id="dock-skills">
+        <i data-lucide="cpu"></i>
+      </a>
+      <a href="services.html" class="dock-item" data-tooltip="Services" id="dock-services">
+        <i data-lucide="briefcase"></i>
+      </a>
+      <div class="dock-separator"></div>
+      <a href="https://github.com/taskinkadivar123" class="dock-item" data-tooltip="GitHub" target="_blank"
+        rel="noopener" id="dock-github">
+        <i data-lucide="github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/taskin-kadivar-58916b325/" class="dock-item" data-tooltip="LinkedIn"
+        target="_blank" rel="noopener" id="dock-linkedin">
+        <i data-lucide="linkedin"></i>
+      </a>
+      <a href="https://www.fiverr.com/taskookservices/" class="dock-item" data-tooltip="Fiverr" target="_blank"
+        rel="noopener" id="dock-fiverr">
+        <i data-lucide="shopping-bag"></i>
+      </a>
+      <div class="dock-separator"></div>
+      <a href="contact.html" class="dock-item" data-tooltip="Contact" id="dock-contact">
+        <i data-lucide="mail"></i>
+      </a>
+    </div>
+  </nav>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.js"></script>
+
+  <!-- App Modules -->
+  <script src="js/theme.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/dock.js"></script>
+  <script src="js/skills.js"></script>
+  <script src="js/github.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

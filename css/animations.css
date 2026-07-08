@@ -1,0 +1,244 @@
+/* ============================================
+   TaskOS — Animations
+   ============================================ */
+
+/* ── Fade In Up ──────────────────────────── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Fade In Down ────────────────────────── */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Fade In Left ────────────────────────── */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ── Fade In Right ───────────────────────── */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ── Scale In ────────────────────────────── */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ── Slide Up ────────────────────────────── */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ── Pulse ───────────────────────────────── */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+/* ── Gradient Move ───────────────────────── */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animated-gradient {
+  background-size: 200% 200%;
+  animation: gradientMove 8s ease infinite;
+}
+
+/* ── Glow Pulse ──────────────────────────── */
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(var(--primary-rgb), 0.2);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(var(--primary-rgb), 0.4);
+  }
+}
+
+/* ── Typing ──────────────────────────────── */
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* ── Spin ────────────────────────────────── */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ── Float Slow ──────────────────────────── */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-5px) rotate(0.5deg); }
+  75% { transform: translateY(5px) rotate(-0.5deg); }
+}
+
+/* ── Shimmer ─────────────────────────────── */
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+/* ── Count Up ────────────────────────────── */
+.count-up {
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Stagger Children ────────────────────── */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.stagger-children.animated > * {
+  animation: fadeInUp 0.5s var(--ease-out) forwards;
+}
+
+.stagger-children.animated > *:nth-child(1) { animation-delay: 0s; }
+.stagger-children.animated > *:nth-child(2) { animation-delay: 0.1s; }
+.stagger-children.animated > *:nth-child(3) { animation-delay: 0.2s; }
+.stagger-children.animated > *:nth-child(4) { animation-delay: 0.3s; }
+.stagger-children.animated > *:nth-child(5) { animation-delay: 0.4s; }
+.stagger-children.animated > *:nth-child(6) { animation-delay: 0.5s; }
+.stagger-children.animated > *:nth-child(7) { animation-delay: 0.6s; }
+.stagger-children.animated > *:nth-child(8) { animation-delay: 0.7s; }
+
+/* ── Progress Fill ───────────────────────── */
+.progress-fill {
+  transition: width 1.2s var(--ease-out);
+}
+
+/* ── Hero entrance ───────────────────────── */
+.hero-enter .hero-content {
+  animation: fadeInLeft 0.8s var(--ease-out) 0.3s both;
+}
+
+.hero-enter .hero-visual {
+  animation: fadeInRight 0.8s var(--ease-out) 0.5s both;
+}
+
+.hero-enter .hero-badge {
+  animation: fadeInDown 0.5s var(--ease-out) 0.1s both;
+}
+
+/* ── Dock entrance ───────────────────────── */
+.dock-enter {
+  animation: slideUp 0.6s var(--ease-out) 1.2s both;
+}
+
+/* ── Line draw ───────────────────────────── */
+@keyframes drawLine {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* ── Chart bar grow ──────────────────────── */
+.chart-bar {
+  transform-origin: bottom;
+  animation: growBar 1s var(--ease-out) forwards;
+  transform: scaleY(0);
+}
+
+@keyframes growBar {
+  to {
+    transform: scaleY(1);
+  }
+}
+
+.chart-bar:nth-child(1) { animation-delay: 0.1s; }
+.chart-bar:nth-child(2) { animation-delay: 0.2s; }
+.chart-bar:nth-child(3) { animation-delay: 0.3s; }
+.chart-bar:nth-child(4) { animation-delay: 0.4s; }
+.chart-bar:nth-child(5) { animation-delay: 0.5s; }
+.chart-bar:nth-child(6) { animation-delay: 0.6s; }
+.chart-bar:nth-child(7) { animation-delay: 0.7s; }
+.chart-bar:nth-child(8) { animation-delay: 0.8s; }
+
+/* ── Reduced Motion ──────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taskin Kadivar — Full Stack Django Developer | Python Specialist</title>
+  <meta name="description"
+    content="Taskin Kadivar is a Full Stack Django Developer, Python Specialist & Backend Engineer building production-ready applications that scale.">
+  <meta name="keywords"
+    content="Taskin Kadivar, Django Developer, Python Developer, Full Stack Developer, REST API, Backend Engineer, Portfolio">
+  <meta name="author" content="Taskin Kadivar">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="TaskOS — Build. Deploy. Scale. | Taskin Kadivar">
+  <meta property="og:description"
+    content="Building production-ready applications that scale. Django, Python, REST APIs.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://taskinkadivar123.github.io/TaskinKadivar/">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%232563EB'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-size='16' font-weight='bold' fill='white'>TK</text></svg>">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    /* Center alignments and 3D preloader animations */
+    .preloader-brand {
+      width: 80px;
+      height: 80px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--text);
+      margin: 0 auto var(--space-4);
+      box-shadow: var(--shadow-glow-primary);
+      animation: pulseBrand 2s infinite ease-in-out;
+    }
+
+    @keyframes pulseBrand {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      50% {
+        transform: scale(1.08);
+        opacity: 0.9;
+      }
+    }
+
+    .pinterest-card {
+      background: var(--surface);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 18px;
+      overflow: hidden;
+      transition: all var(--duration-normal) var(--ease-out);
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .pinterest-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(var(--primary-rgb), 0.3);
+      box-shadow: 0 12px 24px -10px rgba(var(--primary-rgb), 0.15);
+    }
+
+    .pinterest-card-img {
+      height: 180px;
+      background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.1), rgba(var(--secondary-rgb), 0.1));
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .instagram-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--space-4);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    }
+
+    .instagram-user {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+
+    .instagram-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--fs-xs);
+      font-weight: var(--fw-bold);
+      color: var(--text);
+    }
+
+    .reddit-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-1);
+      margin-top: var(--space-3);
+    }
+
+    .reddit-badge {
+      font-size: 10px;
+      font-weight: var(--fw-medium);
+      padding: 2px 8px;
+      background: rgba(var(--primary-rgb), 0.1);
+      color: var(--primary);
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(var(--primary-rgb), 0.1);
+      text-transform: uppercase;
+      letter-spacing: var(--ls-wide);
+    }
+
+    .youtube-control-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--space-4) 0 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.03);
+      margin-top: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-content">
+      <div class="preloader-brand">TK</div>
+      <div class="preloader-bar" style="margin-bottom: var(--space-4)">
+        <div class="preloader-bar-fill"></div>
+      </div>
+      <div class="preloader-subtext" id="preloaderSubtext"
+        style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--muted)">Initializing...</div>
+    </div>
+  </div>
+
+  <!-- Cursor Glow -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+
+  <!-- ═══════════════════════════════════════
+       HERO
+       ═══════════════════════════════════════ -->
+  <section class="hero hero-enter" id="hero" style="padding-top: 120px">
+    <div class="hero-grid-lines"></div>
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Left: Content -->
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge badge-success">
+              <span class="badge-dot"></span>
+              🟢 Available for Freelance
+            </span>
+          </div>
+
+          <h1 class="hero-name" style="margin-bottom: var(--space-2)">
+            Taskin<br><span class="text-gradient">Kadivar</span>
+          </h1>
+
+          <div class="hero-roles" style="margin-bottom: var(--space-6)">
+            <span class="hero-role"><span class="role-bullet"></span> Full Stack Django Developer</span>
+            <span class="hero-role"><span class="role-bullet" style="background:var(--secondary)"></span> Python
+              Specialist</span>
+            <span class="hero-role"><span class="role-bullet" style="background:var(--accent)"></span> Custom PHP
+              Developer</span>
+            <span class="hero-role"><span class="role-bullet" style="background:var(--success)"></span> Backend
+              Engineer</span>
+          </div>
+
+          <p class="hero-tagline">
+            I build scalable web applications using Python, Django, REST APIs and Custom PHP. From admin dashboards to
+            booking platforms and e-commerce systems, I transform ideas into production-ready software.
+          </p>
+
+          <div class="hero-cta">
+            <a href="projects.html" class="btn btn-primary btn-lg magnetic-wrap" id="btn-view-projects">
+              <i data-lucide="folder-open"></i> View Projects
+            </a>
+            <a href="contact.html" class="btn btn-secondary btn-lg magnetic-wrap" id="btn-hire-me">
+              <i data-lucide="send"></i> Hire Me
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Visual (Code Editor & Terminal Dashboard UI) -->
+        <div class="hero-visual-container">
+          <!-- Floating Labels -->
+          <span class="tech-badge-float tb-1">🐍 Python</span>
+          <span class="tech-badge-float tb-2">🎯 Django</span>
+          <span class="tech-badge-float tb-3">🐘 Custom PHP</span>
+          <span class="tech-badge-float tb-4">⚡ REST API</span>
+          <span class="tech-badge-float tb-5">🗄️ MySQL</span>
+          <span class="tech-badge-float tb-6">✨ JavaScript</span>
+          <span class="tech-badge-float tb-7">🌿 Git</span>
+
+          <div class="hero-visual">
+            <!-- Code Editor -->
+            <div class="code-editor hero-editor" id="heroEditor">
+              <div class="code-editor-header">
+                <div class="terminal-dots">
+                  <span class="terminal-dot"></span>
+                  <span class="terminal-dot"></span>
+                  <span class="terminal-dot"></span>
+                </div>
+                <div class="code-editor-tab">
+                  <i data-lucide="file-code-2"></i>
+                  taskin.py
+                </div>
+              </div>
+              <div class="code-editor-body">
+                <div class="code-line"><span class="line-number">1</span><span class="line-content"><span
+                      class="syn-keyword">class</span> <span class="syn-class">Developer</span>:</span></div>
+                <div class="code-line"><span class="line-number">2</span><span class="line-content"> <span
+                      class="syn-attr">language</span> <span class="syn-op">=</span> <span
+                      class="syn-string">"Python"</span></span></div>
+                <div class="code-line"><span class="line-number">3</span><span class="line-content"> <span
+                      class="syn-attr">framework</span> <span class="syn-op">=</span> <span
+                      class="syn-string">"Django"</span></span></div>
+                <div class="code-line"><span class="line-number">4</span><span class="line-content"> <span
+                      class="syn-attr">backend</span> <span class="syn-op">=</span> <span class="syn-string">"REST
+                      API"</span></span></div>
+                <div class="code-line"><span class="line-number">5</span><span class="line-content"> <span
+                      class="syn-attr">database</span> <span class="syn-op">=</span> <span
+                      class="syn-string">"MySQL"</span></span></div>
+                <div class="code-line"><span class="line-number">6</span><span class="line-content"><span
+                      class="syn-builtin">developer</span>.<span class="syn-func">build</span>()</span></div>
+              </div>
+            </div>
+
+            <!-- Terminal (Webserver state output, much easier for clients to read) -->
+            <div class="terminal-window hero-terminal" id="heroTerminal">
+              <div class="terminal-header">
+                <div class="terminal-dots">
+                  <span class="terminal-dot"></span>
+                  <span class="terminal-dot"></span>
+                  <span class="terminal-dot"></span>
+                </div>
+                <span class="terminal-title">~/taskin — bash</span>
+              </div>
+              <div class="terminal-body">
+                <div class="terminal-line">
+                  <span class="terminal-prompt">~/taskin $</span>
+                  <span class="terminal-command">python portfolio.py</span>
+                </div>
+                <div class="terminal-output" style="margin-top:var(--space-2)">
+                  <span class="terminal-success">✔ Django Expert</span><br>
+                  <span class="terminal-success">✔ REST APIs</span><br>
+                  <span class="terminal-success">✔ MySQL</span><br>
+                  <span class="terminal-success">✔ Custom PHP</span><br>
+                  <span class="terminal-success">✔ Responsive UI</span><br>
+                  <span class="terminal-success">✔ Production Ready</span><br><br>
+                  <span style="color:var(--primary)">→ All systems operational.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       LIVE STATUS BAR
+       ═══════════════════════════════════════ -->
+  <div class="status-bar" id="status">
+    <div class="container">
+      <div class="status-bar-inner">
+        <div class="status-item">
+          <i data-lucide="folder-check"></i>
+          <span class="status-value"><span class="count-up" data-target="5">0</span>+ Projects</span>
+        </div>
+        <div class="status-item">
+          <i data-lucide="globe"></i>
+          <span class="status-value"><span class="count-up" data-target="2">0</span> Live Projects</span>
+        </div>
+        <div class="status-item">
+          <i data-lucide="monitor"></i>
+          <span class="status-value">100% Responsive</span>
+        </div>
+        <div class="status-item">
+          <i data-lucide="shield-check"></i>
+          <span class="status-value">User + Admin Dashboards</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       FEATURED PROJECTS (Only 2 projects displayed on homepage)
+       ═══════════════════════════════════════ -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label"><i data-lucide="layout"></i> Portfolio</span>
+        <h2 class="section-title">Featured <span class="text-gradient">Work</span></h2>
+        <p class="section-subtitle">From digital libraries to salon booking — real-world production applications.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: Taskook Digital Library -->
+        <div class="pinterest-card reveal">
+          <div class="instagram-header">
+            <div class="instagram-user">
+              <div class="instagram-avatar">TL</div>
+              <div>
+                <div style="font-size: var(--fs-xs); font-weight: var(--fw-semibold)">Taskook Digital Library</div>
+                <div style="font-size: 10px; color: var(--muted)">Django · Python · SQLite</div>
+              </div>
+            </div>
+            <span class="badge badge-success btn-sm" style="font-size: 9px">Production</span>
+          </div>
+
+          <div class="pinterest-card-img">📚</div>
+
+          <div style="padding: var(--space-5); display: flex; flex-direction: column; flex: 1">
+            <div class="reddit-tags">
+              <span class="reddit-badge">E-Commerce</span>
+              <span class="reddit-badge">Full Stack</span>
+              <span class="reddit-badge">Django</span>
+            </div>
+            <h3 style="font-size: var(--fs-base); margin-top: var(--space-3); font-weight: var(--fw-semibold)">Taskook
+              Digital Library</h3>
+            <p style="font-size: var(--fs-xs); color: var(--muted); line-height: 1.4; margin-top: var(--space-2)">
+              Full e-commerce platform for digital books with authentication, wishlist, cart, checkout, orders, and
+              admin dashboard.
+            </p>
+
+            <div class="youtube-control-bar">
+              <a href="case-study.html" class="btn btn-ghost btn-sm" style="padding-left:0"><i data-lucide="info"></i>
+                View Details</a>
+              <a href="https://github.com/taskinkadivar123/taskook" class="btn btn-secondary btn-sm" target="_blank"
+                rel="noopener"><i data-lucide="github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Taskook Salon -->
+        <div class="pinterest-card reveal">
+          <div class="instagram-header">
+            <div class="instagram-user">
+              <div class="instagram-avatar" style="background:linear-gradient(135deg,var(--accent),var(--success))">TS
+              </div>
+              <div>
+                <div style="font-size: var(--fs-xs); font-weight: var(--fw-semibold)">Taskook Salon</div>
+                <div style="font-size: 10px; color: var(--muted)">Django · REST API · AJAX</div>
+              </div>
+            </div>
+            <span class="badge badge-success btn-sm" style="font-size: 9px">Live</span>
+          </div>
+
+          <div class="pinterest-card-img"
+            style="background: linear-gradient(135deg, rgba(var(--secondary-rgb), 0.1), rgba(var(--accent-rgb), 0.1))">
+            💈</div>
+
+          <div style="padding: var(--space-5); display: flex; flex-direction: column; flex: 1">
+            <div class="reddit-tags">
+              <span class="reddit-badge">Booking</span>
+              <span class="reddit-badge">AJAX</span>
+              <span class="reddit-badge">Django</span>
+            </div>
+            <h3 style="font-size: var(--fs-base); margin-top: var(--space-3); font-weight: var(--fw-semibold)">Taskook
+              Salon</h3>
+            <p style="font-size: var(--fs-xs); color: var(--muted); line-height: 1.4; margin-top: var(--space-2)">
+              Salon booking platform built with Django backend and AJAX modules. Features email confirmations, calendar
+              checks, and service selections.
+            </p>
+
+            <div class="youtube-control-bar">
+              <a href="case-study-salon.html" class="btn btn-ghost btn-sm" style="padding-left:0"><i data-lucide="info"></i>
+                View Details</a>
+              <a href="https://saloon-rut1.onrender.com" class="btn btn-primary btn-sm" target="_blank"
+                rel="noopener"><i data-lucide="external-link"></i> Live Demo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: var(--space-12)">
+        <a href="projects.html" class="btn btn-secondary btn-lg">View All Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SKILLS CUBE SECTION
+       ═══════════════════════════════════════ -->
+  <section class="section" id="skills" style="padding-top: 0px;">
+    <div class="container">
+      <div class="section-header reveal" style="text-align: center">
+        <span class="section-label" style="margin: 0 auto var(--space-4)"><i data-lucide="cpu"></i> Technologies</span>
+        <h2 class="section-title">Technologies <span class="text-gradient">I Work With</span></h2>
+        <p class="section-subtitle" style="margin: 0 auto">Hover and drag the 3D cube to rotate through my core skill
+          sets.</p>
+      </div>
+      <br>
+      <!-- 3D Skills Cube Scene -->
+      <div class="scene reveal">
+        <div class="cube">
+          <div class="cube-face face-front">
+            <span class="icon">🐍</span>
+            <span>Python</span>
+          </div>
+          <div class="cube-face face-back">
+            <span class="icon">🎯</span>
+            <span>Django</span>
+          </div>
+          <div class="cube-face face-right">
+            <span class="icon">🐘</span>
+            <span>Custom PHP</span>
+          </div>
+          <div class="cube-face face-left">
+            <span class="icon">🔗</span>
+            <span>REST API</span>
+          </div>
+          <div class="cube-face face-top">
+            <span class="icon">🗄️</span>
+            <span>MySQL</span>
+          </div>
+          <div class="cube-face face-bottom">
+            <span class="icon">⚡</span>
+            <span>JavaScript</span>
+          </div>
+        </div>
+      </div>
+      <br><br>
+      <div
+        style="text-align: center; margin-top: var(--space-8); display: flex; gap: var(--space-4); justify-content: center">
+        <a href="skills.html" class="btn btn-secondary btn-lg">View All Skills</a>
+        <a href="contact.html" class="btn btn-primary btn-lg btn-arrow-hover"><i data-lucide="mail"></i> Get In Touch <i
+            data-lucide="arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+  <br>
+  <!-- ═══════════════════════════════════════
+       DEVELOPMENT PROCESS & WHY ME
+       ═══════════════════════════════════════ -->
+  <section class="section" id="process" style="padding-top: 0px;">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label"><i data-lucide="award"></i> Why Me</span>
+        <h2 class="section-title">My Development <span class="text-gradient">Process</span></h2>
+        <p class="section-subtitle">A proven approach from concept to deployment.</p>
+      </div>
+
+      <div class="process-track">
+        <div class="process-timeline" id="processTimeline">
+          <div class="process-step">
+            <span class="process-number">01</span>
+            <div class="process-icon">💡</div>
+            <span class="process-label">Idea</span>
+            <span class="process-desc">Understanding the vision and requirements</span>
+          </div>
+          <div class="process-step">
+            <span class="process-number">02</span>
+            <div class="process-icon">🎨</div>
+            <span class="process-label">Design</span>
+            <span class="process-desc">Creating intuitive UI/UX wireframes</span>
+          </div>
+          <div class="process-step">
+            <span class="process-number">03</span>
+            <div class="process-icon">⚡</div>
+            <span class="process-label">Development</span>
+            <span class="process-desc">Building with clean, scalable code</span>
+          </div>
+          <div class="process-step">
+            <span class="process-number">04</span>
+            <div class="process-icon">🧪</div>
+            <span class="process-label">Testing</span>
+            <span class="process-desc">Rigorous testing across devices and scenarios</span>
+          </div>
+          <div class="process-step">
+            <span class="process-number">05</span>
+            <div class="process-icon">🚀</div>
+            <span class="process-label">Deployment</span>
+            <span class="process-desc">Launch and ongoing support</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       CTA SECTION
+       ═══════════════════════════════════════ -->
+  <section class="section"
+    style="background: rgba(var(--primary-rgb), 0.03); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border)">
+    <div class="container text-center" style="max-width: 600px; margin: 0 auto; text-align: center">
+      <div class="reveal">
+        <h2 style="font-size: var(--fs-3xl); margin-bottom: var(--space-3)">Have an idea?</h2>
+        <h3 class="text-gradient" style="font-size: var(--fs-4xl); margin-bottom: var(--space-4)">Let's Build It.</h3>
+        <p style="color: var(--muted); margin: 0 auto var(--space-8)">Let's turn your vision into a production-ready
+          application.</p>
+        <div style="display: flex; gap: var(--space-4); justify-content: center">
+          <a href="contact.html" class="btn btn-primary btn-lg btn-arrow-hover">Start a Project <i
+              data-lucide="arrow-right"></i></a>
+          <a href="projects.html" class="btn btn-secondary btn-lg">View My Work</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-terminal">
+        <div class="footer-top">
+          <div class="footer-logo">
+            <div class="footer-logo-icon"><i data-lucide="terminal"></i></div>
+            Taskin Kadivar
+          </div>
+          <span style="color:var(--muted);font-size:var(--fs-xs)">Full Stack Django Developer — Building modern web
+            applications with Python, Django, Custom PHP, and REST APIs.</span>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-tech">
+            <span>Made with</span>
+            <span class="footer-tech-item"><span class="footer-heart">♥</span></span>
+            <span class="footer-tech-item">Python</span>
+            <span class="footer-tech-item">•</span>
+            <span class="footer-tech-item">HTML</span>
+            <span class="footer-tech-item">•</span>
+            <span class="footer-tech-item">CSS</span>
+            <span class="footer-tech-item">•</span>
+            <span class="footer-tech-item">JavaScript</span>
+            <span class="footer-tech-item">•</span>
+            <span class="footer-tech-item">Django</span>
+          </div>
+          <div class="footer-copyright">
+            © 2026 Taskin Kadivar. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════
+       FLOATING DOCK
+       ═══════════════════════════════════════ -->
+  <nav class="dock-container dock-enter" id="dock" aria-label="Navigation dock">
+    <div class="dock">
+      <a href="index.html" class="dock-item" data-tooltip="Home" id="dock-home">
+        <i data-lucide="home"></i>
+      </a>
+      <a href="about.html" class="dock-item" data-tooltip="About" id="dock-about">
+        <i data-lucide="user"></i>
+      </a>
+      <a href="projects.html" class="dock-item" data-tooltip="Projects" id="dock-projects">
+        <i data-lucide="folder-open"></i>
+      </a>
+      <a href="skills.html" class="dock-item" data-tooltip="Skills" id="dock-skills">
+        <i data-lucide="cpu"></i>
+      </a>
+      <a href="services.html" class="dock-item" data-tooltip="Services" id="dock-services">
+        <i data-lucide="briefcase"></i>
+      </a>
+      <div class="dock-separator"></div>
+      <a href="https://github.com/taskinkadivar123" class="dock-item" data-tooltip="GitHub" target="_blank"
+        rel="noopener" id="dock-github">
+        <i data-lucide="github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/taskin-kadivar-58916b325/" class="dock-item" data-tooltip="LinkedIn"
+        target="_blank" rel="noopener" id="dock-linkedin">
+        <i data-lucide="linkedin"></i>
+      </a>
+      <a href="https://www.fiverr.com/taskookservices/" class="dock-item" data-tooltip="Fiverr" target="_blank"
+        rel="noopener" id="dock-fiverr">
+        <i data-lucide="shopping-bag"></i>
+      </a>
+      <div class="dock-separator"></div>
+      <a href="contact.html" class="dock-item" data-tooltip="Contact" id="dock-contact">
+        <i data-lucide="mail"></i>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════
+       SCRIPTS
+       ═══════════════════════════════════════ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.js"></script>
+
+  <!-- App Modules -->
+  <script src="js/theme.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/dock.js"></script>
+  <script src="js/skills.js"></script>
+  <script src="js/github.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/blog.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
